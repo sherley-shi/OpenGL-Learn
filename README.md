@@ -36,7 +36,7 @@ sudo make install
 g++ -o example example.cpp -lGL -lGLU -lglut
 
 //glfw需要链接的库
--lGL  - lGLU  -lglfw3 -lX11 -lXxf86vm  -lXrandr -lpthread -lXi -lXcursor -lXinerama 
+-lglfw3 -lGL -lm -ldl -lXinerama -lXrandr -lXi -lXcursor -lX11 -lXxf86vm -lpthread
 ```
 
 ## 学习资料
