@@ -30,13 +30,18 @@ sudo make
 sudo make install
 
 ```
+## glew 安装
+```bash
+sudo apt-cache search glew
+将列出来的都安装
+```
 ## 编译
 ```bash
 //opengl
 g++ -o example example.cpp -lGL -lGLU -lglut
 
-//glfw需要链接的库
--lglfw3 -lGL -lm -ldl -lXinerama -lXrandr -lXi -lXcursor -lX11 -lXxf86vm -lpthread
+//glfw, glew需要链接的库
+-lGLEW -lglfw3 -lGL -lm -ldl -lXinerama -lXrandr -lXi -lXcursor -lX11 -lXxf86vm -lpthread
 ```
 
 ## 学习资料
