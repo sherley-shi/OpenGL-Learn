@@ -20,7 +20,7 @@ sudo apt-get install freeglut3-dev
 
 ```bash
 首先下载源码
-sudo apt-get install build-dep glfw
+sudo apt-get build-dep glfw
 sudo apt-get install cmake xorg-dev libglu1-mesa-dev
 
 源码解压，进入目录
@@ -42,6 +42,7 @@ g++ -o example example.cpp -lGL -lGLU -lglut
 
 //glfw, glew需要链接的库
 -lGLEW -lglfw3 -lGL -lm -ldl -lXinerama -lXrandr -lXi -lXcursor -lX11 -lXxf86vm -lpthread
+可以将这些编译用的链接库放到文件中，编译时使用: g++ xxx `cat file`
 ```
 
 ## 学习资料
