@@ -198,11 +198,10 @@ void DrawShuang(){
     glColor3f(1.0, 0.0, 0.0);
     glBegin(GL_LINE_LOOP);
     for( int i=0; i<16; i++ )
-        glVertex2f(100+shuang[i][0], 100+shuang[i][1]);
+        glVertex2f(shuang[i][0], shuang[i][1]);
     glEnd();
-    glFlush();
     //f(200, 400, fColor);
-    ScanLineSeed(100, 100, fill_color, border_color);
+    ScanLineSeed(0, 0, fill_color, border_color);
     glFlush();
 }
 
@@ -210,14 +209,15 @@ void DrawShuang(){
 void init(){
     glClearColor(0.0, 0.0, 0.0, 0.0);
     glMatrixMode(GL_PROJECTION);
-    gluOrtho2D(0, WIDTH, 0, HEIGH);
+    gluOrtho2D(-100, 100, -100, 100);
     glMatrixMode(GL_MODELVIEW);
 }
 
 
 void display(){
     glClear(GL_COLOR_BUFFER_BIT);
-    //DrawShuang();
+    DrawShuang();
+    /*
     glColor3f(0.0, 0.0, 0.0);
     glColor3f(1.0, 0.0, 0.0);
     glBegin(GL_LINE_LOOP);
@@ -227,6 +227,7 @@ void display(){
     glEnd();
     ScanLineSeed(15, 0, fill_color, border_color);
     glFlush();
+    */
 }
 
 
